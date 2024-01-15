@@ -2,7 +2,7 @@
 
 ## Description
 
-The bonus task is designed to review what we learned during the previous lesson **3.2: Responsive Web Design II** at the [Engeto Front-end Developer Academy](https://engeto.cz/webova-akademie/). Complete the task in VS Code, and you can check it against the reference solution below at the end:
+The bonus task serves to review what we have learned during the previous lesson **3.2: Responsive Web Design II.** at the [Engeto Front-end Developer Academy](https://engeto.cz/webova-akademie/). The task is completed in VS Code and can be compared with the reference solution below:
 
 ### Reference HTML Solution
 
@@ -172,7 +172,7 @@ The task was to create a simple responsive page with a hero section and an image
 
 ## Popis
 
-Bonusový úkol slouží k zopakování toho, co jsme se naučili během dosavadní lekce <b>3.2: Responzivní web design II.</b> v <a href="https://engeto.cz/webova-akademie/">Engeto Front-end Developer Akademii</a>. Úkol vypracujte ve VS Code a můžete si ho na konci zkontrolovat s referenčním řešením níže:
+Bonusový úkol slouží k zopakování toho, co jsme se naučili během dosavadní lekce <b>3.2: Responzivní web design II.</b> v <a href="https://engeto.cz/webova-akademie/">Engeto Front-end Developer Akademii</a>. Úkol je vypracován ve VS Code a je možné jej porovnat s referenčním řešením níže:
 
 ### Referenční řešení HTML
 
