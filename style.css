@@ -1,235 +1,228 @@
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-	--header-height: 2rem;
+  --header-height: 2rem;
 
-	/*========== Colors ==========*/
-	--nav-background: #F08D8F;
-	--white-color: #fff;
+  /*========== Colors ==========*/
+  --nav-background: #f08d8f;
+  --white-color: #fff;
 
-	/*========== Fonts ==========*/
-	--link-size: 1rem;
-	--body-margin: .5rem .75rem;
-	--hero-subtitle-size: 0.98rem;
-	--hero-title-size: 1.5rem;
-	--link-weight: 900;
+  /*========== Fonts ==========*/
+  --link-size: 1rem;
+  --link-weight: 900;
+  --hero-subtitle-size: 0.98rem;
+  --hero-title-size: 1.5rem;
+
+  --body-margin: 0.5rem 0.75rem;
 }
 
 /*========== Responsive variables ==========*/
 @media screen and (min-width: 768px) {
-	:root {
-		--header-height: 3.75rem;
-		--body-margin: .5rem 2rem;
-		--hero-subtitle-size: 1.25rem;
-		--hero-title-size: 1.75rem;
-		--link-size: 1rem;
-		--link-weight: 500;
-	}
-}
+  :root {
+    --header-height: 3.75rem;
 
+    --link-weight: 500;
+    --hero-subtitle-size: 1.25rem;
+    --hero-title-size: 1.75rem;
+    --link-size: 1rem;
+
+    --body-margin: 0.5rem 2rem;
+  }
+}
 
 /*=============== BASE ===============*/
 body {
-	position: relative;
-	min-height: calc(100vh - 0.75rem);
-	;
-	font-family: 'Roboto', sans-serif;
+  position: relative;
+  min-height: calc(100vh - 0.5rem);
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
-	display: block;
-	width: 100%;
-	height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
-
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-	max-width: 100%;
-	margin: var(--body-margin);
+  max-width: 100%;
+  margin: var(--body-margin);
 }
 
 .main {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .section {
-	padding-block: 6rem;
+  padding-block: 6rem;
 }
-
 
 /*=============== NAVIGATION ===============*/
 .nav {
-	background-color: var(--nav-background);
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	height: var(--header-height);
-	padding-inline: .75rem;
-	border-radius: .5rem;
+  background-color: var(--nav-background);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: var(--header-height);
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
-	.nav__menu {
-		position: fixed;
-		top: -100%;
-		left: 0;
-		background-color: var(--nav-background);
-		width: 100%;
-		padding-block: 5rem;
-		transition: top 0.4s;
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: var(--nav-background);
+    width: 100%;
+    padding-block: 5rem;
+    transition: top 0.4s;
 
-		border-bottom-right-radius: .5rem;
-		border-bottom-left-radius: .5rem;
-		z-index: 2;
-	}
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    z-index: 2;
+  }
 }
 
 .nav__list {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	row-gap: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
 }
 
 .nav__link {
-	position: relative;
-	color: var(--white-color);
-	font-size: var(--link-size);
-	font-weight: var(--link-weight);
+  position: relative;
+  color: var(--white-color);
+  font-size: var(--link-size);
+  font-weight: var(--link-weight);
 }
 
 .nav__link::after {
-	content: '';
-	width: 0;
-	height: 3px;
-	background-color: var(--white-color);
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: -0.25rem;
-	transition: width 0.3s;
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: var(--white-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.25rem;
+  transition: width 0.3s;
 }
 
 .nav__link:hover::after {
-	width: 100%;
-
+  width: 100%;
 }
 
 .nav__close {
-	position: absolute;
-	top: 1rem;
-	right: 1.75rem;
-	transition: transform 0.4s;
+  position: absolute;
+  top: 1rem;
+  right: 1.75rem;
+  transition: transform 0.4s;
 }
 
 .nav__toggle {
-	width: 25px;
-	height: 20px;
-
+  width: 25px;
+  height: 20px;
 }
 
 .icon {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	z-index: 99;
-	cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
 }
-
 
 /* Show menu */
 .show-menu {
-	top: 0;
+  top: 0;
 }
 
 /*=============== HERO SECTION ===============*/
 
 .hero-section {
-	height: 26.875rem;
-	width: 100%;
-	margin-bottom: .5rem;
-	position: relative;
+  height: 26.875rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  position: relative;
 
-	background-image: url('img//hero.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: .75rem;
+  background-image: url('img//hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.75rem;
 }
 
 .hero-text {
-	position: absolute;
-	bottom: 1.75rem;
-	left: 1.25rem;
-	color: var(--white-color);
+  position: absolute;
+  bottom: 1.75rem;
+  left: 1.25rem;
+  color: var(--white-color);
 }
 
 .hero-title {
-	font-size: var(--hero-title-size);
+  font-size: var(--hero-title-size);
 }
 
 .hero-subtitle {
-	font-size: var(--hero-subtitle-size);
-	margin-bottom: .5rem;
+  font-size: var(--hero-subtitle-size);
+  margin-bottom: 0.5rem;
 }
 
 /*=============== IMAGE CONTAINER ===============*/
 .image-container {
-	height: 19.5rem;
+  height: 19.5rem;
 }
 
 .image-container img {
-	height: 100%;
-	border-radius: .75rem;
-	object-fit: cover;
+  height: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
 }
 
-@media screen and (min-width:768px) {
-	.nav {
-		justify-content: center;
-		padding-inline: 0;
-	}
+@media screen and (min-width: 768px) {
+  .nav {
+    justify-content: center;
+    padding-inline: 0;
+  }
 
-	.nav__toggle {
-		display: none;
-	}
+  .nav__toggle {
+    display: none;
+  }
 
-	.nav__list {
-		flex-direction: row;
-		column-gap: 4.5rem;
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4.5rem;
+  }
 
-	}
+  .nav__link::after {
+    height: 2px;
+    bottom: -0.15rem;
+  }
 
-	.nav__link::after {
-		height: 2px;
-		bottom: -0.15rem;
-	}
+  .hero-section {
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
 
-	.hero-section {
-		height: 70vh;
-		width: 100%;
-		margin-bottom: 1.5rem;
-	}
-
-	.image-container {
-		max-width: 50%;
-		height: 100%;
-	}
-
-
+  .image-container {
+    max-width: 50%;
+    height: 100%;
+  }
 }
